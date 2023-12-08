@@ -72,7 +72,7 @@ def create_folder(folder):
         logging.info(f'Successfully made the folder: {folder}')
     except FileExistsError:
         if folder_path.stat().st_size > 0: # check if the folder size is greater than 0 (Basically checks if the folder already has extracted data...)
-            logging.info(f'The folder {folder} already exists, No changes made!')
+            logging.info(f'The folder {folder} already exists and there is data, No changes made!')
             return False
     return folder_path
 
